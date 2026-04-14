@@ -40,7 +40,7 @@
     color: #1a1240;
     border: none;
     border-radius: 100px;
-    padding: 28px 60px;
+    padding: 28px 80px;
     font-size: clamp(22px, 5vw, 32px);
     font-weight: 900;
     cursor: pointer;
@@ -54,27 +54,26 @@
 
   /* ── SPIN SCREEN ────────────────────────── */
   #spinScreen {
-  background: #1a1240;
-  gap: 20px;
-  padding: 0;
-  position: relative;
-  justify-content: center;
-  padding-top: 16px;
-}
+    background: #1a1240;
+    gap: 0;
+    padding: 0;
+    position: relative;
+    justify-content: flex-start;
+    padding-top: 16px;
+  }
 
 
 
   /* Slot machine container */
   .slot-wrapper {
-  position: relative;
-  width: 100%;
-  flex: 0;
-  margin-bottom: 24px; /* podés ajustar este valor */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
+    position: relative;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
 
   /* The visible window */
   .slot-window {
@@ -142,13 +141,14 @@
   }
 
   .spin-footer {
-    width: 100%;
-    padding: 12px 24px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-  }
+  width: 100%;
+  padding: 0 24px 40px; /* menos padding arriba, más control abajo */
+  margin-top: -40px;   /* 👈 esto sube el botón */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
 
   .btn-spin {
     background: linear-gradient(135deg, #a855f7, #7c3aed);
