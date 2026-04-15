@@ -54,26 +54,26 @@
 
   /* ── SPIN SCREEN ────────────────────────── */
   #spinScreen {
-  background: #1a1240;
-  gap: 0;
-  padding: 0;
-  position: relative;
-  justify-content: flex-start;
-  padding-top: 16px;
-}
+    background: #1a1240;
+    gap: 0;
+    padding: 0;
+    position: relative;
+    justify-content: flex-start;
+    padding-top: 16px;
+  }
 
 
 
   /* Slot machine container */
   .slot-wrapper {
-  position: relative;
-  width: 100%;
-  flex: 1; /* 👈 esto NO se toca */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
+    position: relative;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
 
   /* The visible window */
   .slot-window {
@@ -141,16 +141,13 @@
   }
 
   .spin-footer {
-  position: absolute;
-  bottom: -30px; /* 👈 clave */
-  left: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 5;
-  pointer-events: none;
-}
+    width: 100%;
+    padding: 12px 24px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
 
   .btn-spin {
     background: linear-gradient(135deg, #a855f7, #7c3aed);
