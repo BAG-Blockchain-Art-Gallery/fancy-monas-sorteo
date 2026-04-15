@@ -70,10 +70,11 @@
   width: 100%;
   flex: 1;
   display: flex;
-  flex-direction: column; /* 👈 clave */
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 20px; /* 👈 controla distancia */
+  justify-content: flex-start; /* 👈 ESTE ES EL FIX */
+  padding-top: 40px; /* 👈 opcional, da aire arriba */
+  gap: 20px;
 }
 
   /* The visible window */
@@ -352,10 +353,13 @@
       <div class="slot-overlay"></div>
       <div class="slot-frame"></div>
     </div>
+
+    <div class="spin-footer">
+      <button class="btn-spin" id="btnSpin" onclick="spin()">¡Girar!</button>
+    </div>
+
   </div>
-  <div class="spin-footer">
-    <button class="btn-spin" id="btnSpin" onclick="spin()">¡Girar!</button>
-  </div>
+
 </div>
 
 <!-- ── RESULT SCREEN ────────────────────── -->
