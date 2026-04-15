@@ -66,14 +66,15 @@
 
   /* Slot machine container */
   .slot-wrapper {
-    position: relative;
-    width: 100%;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
+  position: relative;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* 👈 clave */
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* 👈 controla distancia */
+}
 
   /* The visible window */
   .slot-window {
@@ -140,20 +141,12 @@
     box-shadow: inset 0 0 30px rgba(249,215,72,0.1);
   }
 
-.spin-footer {
-  position: absolute;
-  bottom: -30px;
-  left: 0;
+  .spin-footer {
+  position: static; /* 👈 deja de ser absoluto */
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 5;
-  pointer-events: none;
-}
-
-.btn-spin {
-  pointer-events: auto;
 }
 
   .btn-spin {
@@ -359,13 +352,10 @@
       <div class="slot-overlay"></div>
       <div class="slot-frame"></div>
     </div>
-
-    <div class="spin-footer">
-      <button class="btn-spin" id="btnSpin" onclick="spin()">¡Girar!</button>
-    </div>
-
   </div>
-
+  <div class="spin-footer">
+    <button class="btn-spin" id="btnSpin" onclick="spin()">¡Girar!</button>
+  </div>
 </div>
 
 <!-- ── RESULT SCREEN ────────────────────── -->
