@@ -53,14 +53,14 @@
   .hint { color: #6d5ea8; font-size: 14px; text-align: center; }
 
   /* ── SPIN SCREEN ────────────────────────── */
- #spinScreen {
-  background: #1a1240;
-  gap: 20px;
-  padding: 0;
-  position: relative;
-  justify-content: center;
-  padding-top: 16px;
-}
+  #spinScreen {
+    background: #1a1240;
+    gap: 0;
+    padding: 0;
+    position: relative;
+    justify-content: flex-start;
+    padding-top: 16px;
+  }
 
 
 
@@ -141,13 +141,19 @@
   }
 
   .spin-footer {
+  position: absolute;
+  bottom: 80px; /* 👈 ajustá esto */
+  left: 0;
   width: 100%;
-  padding: 0 24px 40px; /* menos padding arriba, más control abajo */
-  margin-top: -60px;   /* 👈 esto sube el botón */
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
+  z-index: 5;
+  pointer-events: none; /* 👈 importante */
+}
+
+  .btn-spin {
+  pointer-events: auto;
 }
 
   .btn-spin {
